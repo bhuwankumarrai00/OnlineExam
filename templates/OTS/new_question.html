@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Question</title>
+</head>
+<body>
+    <div class="menu">
+        <!--menu for admin-->
+        <a href="http://localhost:8000/OTS/new-question/">New</a>
+        <a href="http://localhost:8000/OTS/view-questions/">View All</a>
+
+    </div>
+    <h1>New Question</h1>
+    <form action="http://localhost:8000/OTS/save-question/" method="post">
+        {% csrf_token %}
+        <div class="title">Question Statement</div>
+        <div class="data"><textarea name="question"></textarea></div>
+        <div class="title">Option a</div>
+        <div class="data"><input type="text" name="optiona"></div>
+        <div class="title">Option b</div>
+        <div class="data"><input type="text" name="optionb"></div>
+        <div class="title">Option c</div>
+        <div class="data"><input type="text" name="optionc"></div>
+        <div class="title">Option d</div>
+        <div class="data"><input type="text" name="optiond"></div>
+        <div class="title">Answer</div>
+        <div class="data">
+            <select name="answer">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+            </select>
+        </div>
+        <div><input type="submit" value="Save"></div>
+
+    </form>
+</body>
+</html>

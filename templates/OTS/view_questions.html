@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view Questions</title>
+</head>
+<body>
+    <div class="menu">
+        <!--menu for admin-->
+        <a href="http://localhost:8000/OTS/new-question/">New</a>
+        <a href="http://localhost:8000/OTS/view-questions/">View All</a>
+    </div>
+    <h1>view Questions</h1>
+    <table>
+        <tr>
+            <th>Ques no.</th>
+            <th>Question</th>
+            <th>Option a</th>
+            <th>Option b</th>
+            <th>Option c</th>
+            <th>Option d</th>
+            <th>Answer</th>
+        </tr>
+        {% for question in questions%}
+        <tr>
+            <td>{{question.qno}}</td>
+            <td>{{question.que}}</td>
+            <td>{{question.optiona}}</td>
+            <td>{{question.optionb}}</td>
+            <td>{{question.optionc}}</td>
+            <td>{{question.optiond}}</td>
+            <td>{{question.answer}}</td>
+            <td><a href="http://localhost:8000/OTS/edit-question?qno={{question.qno}}">Edit</a></td>
+            <td><a href="http://localhost:8000/OTS/delete-question?qno={{question.qno}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

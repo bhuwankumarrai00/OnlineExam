@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Result</title>
+</head>
+<body>
+    <div class="menu">
+        <!--menu for admin-->
+        <a href="http://localhost:8000/OTS/new-question/">New</a>
+        <a href="http://localhost:8000/OTS/view-questions/">View All</a>
+        <!-- menu for Learner-->
+        <a href="http://localhost:8000/OTS/start-test/">Start Test</a>
+        <a href="http://localhost:8000/OTS/logout/">Logout</a>
+    </div>
+    <h1>Test Result</h1>
+    <table>
+        <tr>
+            <th>Total Attempt</th>
+            <td>{{total_attempt}}</td>
+        </tr>
+        <tr>
+            <th>Total Right</th>
+            <td>{{total_right}}</td>
+        </tr>
+        <tr>
+            <th>Total Wrong</th>
+            <td>{{total_wrong}}</td>
+        </tr>
+
+    </table>
+</body>
+</html>
